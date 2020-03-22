@@ -1,0 +1,14 @@
+net: "examples/myself/vggnet/train_val.prototxt"
+test_iter: 10
+test_interval: 500  #每经过500次训练，进行一次验证查看accuracy
+base_lr: 0.01
+lr_policy: "step"
+gamma: 0.1
+stepsize: 1000
+display: 20
+max_iter: 2000  #只是做做练习，2000次迭代就够了
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 1000  #每经过1000次迭代训练保存一次快照
+snapshot_prefix: "examples/myself/vggnet/vggnet_train"
+solver_mode: GPU
